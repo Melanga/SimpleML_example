@@ -4,6 +4,7 @@ from sklearn.datasets import load_breast_cancer
 
 
 def create_data_frame():
+    #  Create database using sci kit learn cancer database
     cancer = load_breast_cancer()
     df_data = np.column_stack((cancer.data, cancer.target))
     df_columns = np.append(cancer.feature_names, 'target')
